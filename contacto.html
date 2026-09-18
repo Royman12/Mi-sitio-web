@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+  </head>
+  <body>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header>
+      <nav>
+        <h1>Mi Portafolio</h1>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre Mí</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="gustos.html">Gustos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contacto">
+        <h2>¡Hablemos!</h2>
+        <p>
+          ¿Tienes alguna pregunta, quieres compartir un gusto en común o
+          simplemente saludar? ¡Déjame un mensaje!
+        </p>
+
+        <!-- FORMULARIO DE CONTACTO -->
+        <form action="#" method="POST" class="formulario-contacto">
+          <div class="campo-formulario">
+            <label for="nombre">Nombre completo:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ej. Ana García"
+              required
+            />
+          </div>
+
+          <div class="campo-formulario">
+            <label for="email">Correo electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ej. ana@correo.com"
+              required
+            />
+          </div>
+
+          <div class="campo-formulario">
+            <label for="asunto">Asunto:</label>
+            <input
+              type="text"
+              id="asunto"
+              name="asunto"
+              placeholder="¿De qué quieres hablar?"
+            />
+          </div>
+
+          <div class="campo-formulario">
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              placeholder="Escribe tu mensaje aquí..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 - Mi Sitio Web Personal</p>
+    </footer>
+  </body>
+</html>
