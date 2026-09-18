@@ -1,14 +1,14 @@
-/* 1. VARIABLES GLOBALES (Nuestra paleta de colores) */
 :root {
   --color-primario: #25515e;
   --color-secundario: #a8987c;
   --color-fondo: #f8fafc;
   --color-texto: #334155;
   --color-blanco: #ffffff;
+  --color-fondo-oscuro: #2d3748;
   --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-/* 2. RESET BÁSICO Y ESTILOS GLOBALES */
+
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ img {
   border-radius: 8px;
 }
 
-/* HEADER Y NAVEGACIÓN */
+
 header {
   background-color: var(--color-primario);
   color: var(--color-blanco);
@@ -80,13 +80,13 @@ nav ul li a {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Hover: se ve el color secundario al pasar el mouse */
+
 nav ul li a:hover {
   background-color: var(--color-secundario);
   color: var(--color-blanco);
 }
 
-/* Página activa: queda marcada con el color secundario */
+
 nav ul li a.active {
   background-color: var(--color-secundario);
   color: var(--color-blanco);
@@ -96,7 +96,7 @@ nav ul li a.active {
 
 
 
-/* CONTENIDO PRINCIPAL (MAIN) */
+
 main {
   max-width: 1100px;
   margin: 40px auto;
@@ -115,7 +115,7 @@ main {
   margin-bottom: 30px;
 }
 
-/* GRID PARA TARJETAS (Index, Hobbies, Gustos) */
+
 .tarjetas,
 .lista-hobbies,
 .grid-gustos {
@@ -125,10 +125,7 @@ main {
   margin-top: 20px;
 }
 
-/* =========================================
-   ESTILO UNIFICADO DE TARJETAS
-   (todas comparten el estilo de .lista-habilidades li)
-   ========================================= */
+
 .tarjeta,
 .hobby-item,
 .gusto-item,
@@ -150,7 +147,7 @@ main {
   transform: translateY(-2px);
 }
 
-/* Títulos dentro de las tarjetas: cambian a blanco al hacer hover */
+
 .tarjeta h3,
 .hobby-item h3,
 .gusto-item h3,
@@ -165,7 +162,7 @@ main {
   color: var(--color-blanco);
 }
 
-/* Párrafos dentro de las tarjetas: heredan blanco en hover */
+
 .tarjeta:hover p,
 .hobby-item:hover p,
 .gusto-item:hover p,
@@ -173,7 +170,7 @@ main {
   color: var(--color-blanco);
 }
 
-/* Imagen dentro de las tarjetas (Gustos y Hobbies) */
+
 .img-gusto,
 .img-hobby {
   width: 100%;
@@ -184,9 +181,7 @@ main {
   display: block;
 }
 
-/* =========================================
-   SECCIÓN SOBRE MÍ (Perfil)
-   ========================================= */
+
 
 .perfil {
   background-color: var(--color-blanco);
@@ -308,4 +303,60 @@ footer {
   text-align: center;
   padding: 20px 0;
   margin-top: 40px;
+}
+
+/* =========================================
+   BOTÓN DE MODO OSCURO
+   ========================================= */
+.btn-modo {
+  background-color: transparent;
+  border: 2px solid var(--color-blanco);
+  color: var(--color-blanco);
+  font-size: 1.2rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-modo:hover {
+  background-color: var(--color-secundario);
+  border-color: var(--color-secundario);
+  transform: rotate(20deg);
+}
+
+/* =========================================
+   MODO OSCURO
+   ========================================= */
+body.modo-oscuro {
+  background-color: var(--color-texto);
+  color: var(--color-blanco);
+}
+
+body.modo-oscuro .bienvenida,
+body.modo-oscuro .perfil,
+body.modo-oscuro .hobbies,
+body.modo-oscuro .gustos,
+body.modo-oscuro .contacto,
+body.modo-oscuro .tarjeta,
+body.modo-oscuro .hobby-item,
+body.modo-oscuro .gusto-item,
+body.modo-oscuro .lista-habilidades li {
+  background-color: var(--color-fondo-oscuro);
+  color: var(--color-blanco);
+}
+
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro h3,
+body.modo-oscuro h4 {
+  color: var(--color-blanco);
+}
+
+body.modo-oscuro .campo-formulario input,
+body.modo-oscuro .campo-formulario textarea {
+  background-color: var(--color-fondo-oscuro);
+  color: var(--color-blanco);
+  border-color: var(--color-secundario);
 }
