@@ -1,34 +1,80 @@
 <!doctype html>
+<!--
+  ============================================================
+  Archivo      : gustos.html
+  Proyecto     : Mi Portafolio Personal
+  Autor        : Royman Camilo Erira Benavides
+  Descripción  : Página "Mis Gustos y Preferencias". Presenta
+                 una cuadrícula de tarjetas con los gustos
+                 personales (música, criptomonedas y gastronomía),
+                 cada una con imagen, título y descripción.
+  Última mod.  : 2026-09-18
+  Dependencias : css/estilos.css      → Hoja de estilos global
+                 js/script.js         → Lógica (modo oscuro, etc.)
+                 imagenes/music.png   → Imagen gusto 1
+                 imagenes/criptos.png → Imagen gusto 2
+                 imagenes/comid.png   → Imagen gusto 3
+  ============================================================
+-->
 <html lang="es">
   <head>
+    <!-- Codificación UTF-8 para caracteres especiales -->
     <meta charset="UTF-8" />
+
+    <!-- Viewport: diseño responsive en dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título mostrado en la pestaña del navegador -->
     <title>Mis Gustos</title>
+
+    <!-- Hoja de estilos principal del sitio -->
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
+
   <body>
+    <!-- ============================================================
+         ENCABEZADO / NAVEGACIÓN
+         ============================================================ -->
     <header>
       <nav>
+        <!-- Título / logotipo textual del portafolio -->
         <h1>Mi Portafolio</h1>
+
+        <!-- Menú principal de navegación entre las páginas del sitio -->
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="sobre-mi.html">Sobre Mí</a></li>
           <li><a href="hobbies.html">Hobbies</a></li>
+          <!-- "active" marca visualmente la página actual (Gustos) -->
           <li><a href="gustos.html" class="active">Gustos</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
+
+        <!-- Botón que alterna entre tema claro y oscuro (ver js/script.js) -->
         <button id="btn-modo" class="btn-modo">🌙</button>
       </nav>
     </header>
 
+    <!-- ============================================================
+         CONTENIDO PRINCIPAL
+         Cuadrícula de tarjetas (<article>) con gustos personales.
+         ============================================================ -->
     <main>
       <section class="gustos">
         <h2>Mis Gustos y Preferencias</h2>
         <p>Estas son algunas de las cosas que disfruto y me apasionan:</p>
 
+        <!-- Grid de tarjetas (definido en css/estilos.css) -->
         <div class="grid-gustos">
+          <!-- ---------- Gusto 1: Música ---------- -->
           <article class="gusto-item">
+            <!--
+              Imagen representativa del gusto.
+              TODO: añadir atributo alt descriptivo, por ejemplo:
+              alt="Audífonos representando el gusto por la música"
+            -->
             <img src="imagenes/music.png" class="img-gusto" />
+
             <h3>Música</h3>
             <p>
               Me encanta escuchar variados géneros. Mis favoritos son el Soul,
@@ -36,8 +82,14 @@
             </p>
           </article>
 
+          <!-- ---------- Gusto 2: Criptomonedas y divisas ---------- -->
           <article class="gusto-item">
+            <!--
+              TODO: añadir alt, por ejemplo:
+              alt="Gráfico de criptomonedas representando el interés por las inversiones"
+            -->
             <img src="imagenes/criptos.png" class="img-gusto" />
+
             <h3>Criptomonedas y divisas</h3>
             <p>
               Me apasiona el mundo de las criptomonedas y las divisas. Sigo de
@@ -46,8 +98,14 @@
             </p>
           </article>
 
+          <!-- ---------- Gusto 3: Gastronomía ---------- -->
           <article class="gusto-item">
+            <!--
+              TODO: añadir alt, por ejemplo:
+              alt="Plato de pasta representando el gusto por la gastronomía"
+            -->
             <img src="imagenes/comid.png" class="img-gusto" />
+
             <h3>Gastronomía</h3>
             <p>
               Apasionado por la pasta y la carne. Me encanta probar platos de
@@ -58,9 +116,14 @@
       </section>
     </main>
 
+    <!-- ============================================================
+         PIE DE PÁGINA
+         ============================================================ -->
     <footer>
       <p>&copy; 2026 - Mi Sitio Web Personal</p>
     </footer>
+
+    <!-- Script al final del body para asegurar que el DOM esté cargado -->
     <script src="js/script.js"></script>
   </body>
 </html>

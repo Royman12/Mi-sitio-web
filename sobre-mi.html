@@ -1,36 +1,71 @@
 <!doctype html>
+<!--
+  ============================================================
+  Archivo      : sobre-mi.html
+  Proyecto     : Mi Portafolio Personal
+  Descripción  : Página "Sobre Mí". Presenta la información
+                 personal del autor (foto, biografía y habilidades).
+  Autor        : Royman Camilo Erira Benavides
+  Última mod.  : 2026-09-18
+  Dependencias : css/estilos.css   → Hoja de estilos global
+                 js/script.js      → Lógica (modo oscuro, etc.)
+                 imagenes/mi-foto.jpeg → Foto de perfil
+  ============================================================
+-->
 <html lang="es">
   <head>
+    <!-- Codificación UTF-8 para caracteres especiales (tildes, ñ, etc.) -->
     <meta charset="UTF-8" />
+
+    <!-- Viewport: adapta el ancho al dispositivo (diseño responsive) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título que aparece en la pestaña del navegador -->
     <title>Sobre Mí</title>
+
+    <!-- Hoja de estilos principal del sitio -->
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
+
   <body>
+    <!-- ============================================================
+         ENCABEZADO / NAVEGACIÓN
+         Barra superior con el nombre del sitio, menú de navegación
+         y botón para alternar el modo oscuro.
+         ============================================================ -->
     <header>
       <nav>
+        <!-- Título / logotipo textual del portafolio -->
         <h1>Mi Portafolio</h1>
+
+        <!-- Menú principal de navegación entre las páginas del sitio -->
         <ul>
           <li><a href="index.html">Inicio</a></li>
+          <!-- La clase "active" marca visualmente la página actual -->
           <li><a href="sobre-mi.html" class="active">Sobre Mí</a></li>
           <li><a href="hobbies.html">Hobbies</a></li>
           <li><a href="gustos.html">Gustos</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
+
+        <!-- Botón que alterna entre tema claro y oscuro (ver js/script.js) -->
         <button id="btn-modo" class="btn-modo">🌙</button>
       </nav>
     </header>
 
+    <!-- ============================================================
+         CONTENIDO PRINCIPAL
+         Sección de perfil con foto, biografía y habilidades.
+         ============================================================ -->
     <main>
       <section class="perfil">
         <h2>Sobre Mí</h2>
-        <!-- Aquí iría tu foto -->
-        <div class="perfil-superior">
-          <img
-            src="imagenes/mi-foto.jpeg"
-            class="foto-perfil"
-          />
 
+        <!-- ---------- Bloque superior: foto + información personal ---------- -->
+        <div class="perfil-superior">
+          <img src="imagenes/mi-foto.jpeg" class="foto-perfil" />
+
+          <!-- Texto biográfico / presentación personal -->
           <div class="info-personal">
             <h3>¿Quién soy?</h3>
             <p>
@@ -47,7 +82,7 @@
           </div>
         </div>
 
-        <!-- Contenedor inferior: Habilidades -->
+        <!-- ---------- Bloque inferior: listado de habilidades ---------- -->
         <div class="habilidades-section">
           <h3>Mis Habilidades</h3>
           <ul class="lista-habilidades">
@@ -59,9 +94,14 @@
       </section>
     </main>
 
+    <!-- ============================================================
+         PIE DE PÁGINA
+         ============================================================ -->
     <footer>
       <p>&copy; 2026 - Mi Sitio Web Personal</p>
     </footer>
+
+    <!-- Script al final del body para que el DOM ya esté cargado -->
     <script src="js/script.js"></script>
   </body>
 </html>

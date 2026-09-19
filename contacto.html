@@ -1,27 +1,62 @@
 <!doctype html>
+<!--
+  ============================================================
+  Archivo      : contacto.html
+  Proyecto     : Mi Portafolio Personal
+  Autor        : Royman Camilo Erira Benavides
+  Descripción  : Página de contacto. Contiene un formulario
+                 accesible (nombre, email, asunto y mensaje)
+                 para que los visitantes puedan enviar un mensaje.
+  Última mod.  : 2026-09-18
+  Dependencias : css/estilos.css → Hoja de estilos global
+                 js/script.js    → Lógica (modo oscuro, validaciones)
+  Nota         : El formulario usa action="#" (no envía a backend
+                 real). TODO: conectar a un endpoint o servicio
+                 (Formspree, EmailJS, backend propio, etc.).
+  ============================================================
+-->
 <html lang="es">
   <head>
+    <!-- Codificación UTF-8 para caracteres especiales -->
     <meta charset="UTF-8" />
+
+    <!-- Viewport: diseño responsive en dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título mostrado en la pestaña del navegador -->
     <title>Contacto</title>
+
+    <!-- Hoja de estilos principal del sitio -->
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
+
   <body>
-    <!-- BARRA DE NAVEGACIÓN -->
+    <!-- ============================================================
+         BARRA DE NAVEGACIÓN
+         ============================================================ -->
     <header>
       <nav>
+        <!-- Título / logotipo textual del portafolio -->
         <h1>Mi Portafolio</h1>
+
+        <!-- Menú principal de navegación entre las páginas del sitio -->
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="sobre-mi.html">Sobre Mí</a></li>
           <li><a href="hobbies.html">Hobbies</a></li>
           <li><a href="gustos.html">Gustos</a></li>
+          <!-- "active" marca visualmente la página actual (Contacto) -->
           <li><a href="contacto.html" class="active">Contacto</a></li>
         </ul>
+
+        <!-- Botón que alterna entre tema claro y oscuro (ver js/script.js) -->
         <button id="btn-modo" class="btn-modo">🌙</button>
       </nav>
     </header>
 
+    <!-- ============================================================
+         CONTENIDO PRINCIPAL
+         ============================================================ -->
     <main>
       <section class="contacto">
         <h2>¡Hablemos!</h2>
@@ -30,8 +65,13 @@
           simplemente saludar? ¡Déjame un mensaje!
         </p>
 
-        <!-- FORMULARIO DE CONTACTO -->
+        <!-- ---------- FORMULARIO DE CONTACTO ----------
+             action : "#"  → actualmente no envía a ningún backend
+             method : POST → método HTTP usado al enviar
+             Cada campo va en su propio .campo-formulario para layout
+        -->
         <form action="#" method="POST" class="formulario-contacto">
+          <!-- Campo: Nombre completo (obligatorio) -->
           <div class="campo-formulario">
             <label for="nombre">Nombre completo:</label>
             <input
@@ -43,6 +83,7 @@
             />
           </div>
 
+          <!-- Campo: Correo electrónico (obligatorio + validación nativa de email) -->
           <div class="campo-formulario">
             <label for="email">Correo electrónico:</label>
             <input
@@ -54,6 +95,7 @@
             />
           </div>
 
+          <!-- Campo: Asunto (opcional) -->
           <div class="campo-formulario">
             <label for="asunto">Asunto:</label>
             <input
@@ -64,6 +106,7 @@
             />
           </div>
 
+          <!-- Campo: Mensaje (obligatorio, multilínea) -->
           <div class="campo-formulario">
             <label for="mensaje">Mensaje:</label>
             <textarea
@@ -75,14 +118,20 @@
             ></textarea>
           </div>
 
+          <!-- Botón de envío del formulario -->
           <button type="submit" class="btn-enviar">Enviar Mensaje</button>
         </form>
       </section>
     </main>
 
+    <!-- ============================================================
+         PIE DE PÁGINA
+         ============================================================ -->
     <footer>
       <p>&copy; 2026 - Mi Sitio Web Personal</p>
     </footer>
+
+    <!-- Script al final del body para asegurar que el DOM esté cargado -->
     <script src="js/script.js"></script>
   </body>
 </html>

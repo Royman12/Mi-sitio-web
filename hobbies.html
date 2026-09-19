@@ -1,37 +1,80 @@
 <!doctype html>
+<!--
+  ============================================================
+  Archivo      : hobbies.html
+  Proyecto     : Mi Portafolio Personal
+  Autor        : Royman Camilo Erira Benavides
+  Descripción  : Página "Mis Hobbies". Muestra una lista de
+                 actividades personales (análisis de mercados,
+                 gestión de capital y lectura) mediante tarjetas
+                 con imagen, título y descripción.
+  Última mod.  : 2026-09-18
+  Dependencias : css/estilos.css       → Hoja de estilos global
+                 js/script.js          → Lógica (modo oscuro, etc.)
+                 imagenes/mercado.png  → Imagen hobby 1
+                 imagenes/capital.png  → Imagen hobby 2
+                 imagenes/lectura.png  → Imagen hobby 3
+  ============================================================
+-->
 <html lang="es">
   <head>
+    <!-- Codificación UTF-8 para caracteres especiales -->
     <meta charset="UTF-8" />
+
+    <!-- Viewport: diseño responsive en dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título mostrado en la pestaña del navegador -->
     <title>Mis Hobbies</title>
+
+    <!-- Hoja de estilos principal del sitio -->
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
+
   <body>
+    <!-- ============================================================
+         ENCABEZADO / NAVEGACIÓN
+         ============================================================ -->
     <header>
       <nav>
+        <!-- Título / logotipo textual del portafolio -->
         <h1>Mi Portafolio</h1>
+
+        <!-- Menú principal de navegación entre las páginas del sitio -->
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="sobre-mi.html">Sobre Mí</a></li>
+          <!-- "active" marca visualmente la página actual (Hobbies) -->
           <li><a href="hobbies.html" class="active">Hobbies</a></li>
           <li><a href="gustos.html">Gustos</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
+
+        <!-- Botón que alterna entre tema claro y oscuro (ver js/script.js) -->
         <button id="btn-modo" class="btn-modo">🌙</button>
       </nav>
     </header>
 
+    <!-- ============================================================
+         CONTENIDO PRINCIPAL
+         Listado de hobbies en formato de tarjetas (<article>).
+         ============================================================ -->
     <main>
       <section class="hobbies">
         <h2>Mis Hobbies</h2>
         <p>Aquí comparto las actividades que disfruto hacer:</p>
 
+        <!-- Contenedor en grid / flex de las tarjetas de hobbies -->
         <div class="lista-hobbies">
+          <!-- ---------- Hobby 1: Análisis de mercados financieros ---------- -->
           <article class="hobby-item">
-            <img
-              src="imagenes/mercado.png"
-              class="img-gusto"
-            />
+            <!--
+              Imagen representativa del hobby.
+              TODO: añadir atributo alt descriptivo, por ejemplo:
+              alt="Gráfico de análisis de mercados financieros"
+            -->
+            <img src="imagenes/mercado.png" class="img-gusto" />
+
             <h3>Análisis de mercados financieros</h3>
             <p>
               Soy muy apasionado por el análisis de mercados financieros, tengo
@@ -43,11 +86,14 @@
             </p>
           </article>
 
+          <!-- ---------- Hobby 2: Gestor de capital ---------- -->
           <article class="hobby-item">
-            <img
-              src="imagenes/capital.png"
-              class="img-gusto"
-            />
+            <!--
+              TODO: añadir alt, por ejemplo:
+              alt="Gráfico de gestión de capital e inversiones"
+            -->
+            <img src="imagenes/capital.png" class="img-gusto" />
+
             <h3>Gestor de capital</h3>
             <p>
               Mi enfoque se basa en cuidar las métricas, respetar las
@@ -57,8 +103,14 @@
             </p>
           </article>
 
+          <!-- ---------- Hobby 3: Lectura ---------- -->
           <article class="hobby-item">
+            <!--
+              TODO: añadir alt, por ejemplo:
+              alt="Libro abierto representando el hábito de la lectura"
+            -->
             <img src="imagenes/lectura.png" class="img-gusto" />
+
             <h3>Lectura</h3>
             <p>
               Disfruto leer libros de crecimiento personal y espiritual que me
@@ -73,9 +125,14 @@
       </section>
     </main>
 
+    <!-- ============================================================
+         PIE DE PÁGINA
+         ============================================================ -->
     <footer>
       <p>&copy; 2026 - Mi Sitio Web Personal</p>
     </footer>
+
+    <!-- Script al final del body para asegurar que el DOM esté cargado -->
     <script src="js/script.js"></script>
   </body>
 </html>
